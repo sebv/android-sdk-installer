@@ -17,8 +17,8 @@ if [[ $os == 'linux' ]]; then
     SDK_FILE=android-sdk_r22.3-linux.tgz
     SDK_URL=http://dl.google.com/android/$SDK_FILE
 elif [[ $os == 'osx' ]]; then
-    SDK_FILE=adt-bundle-mac-x86_64-20131030.zip
-    SDK_URL=http://dl.google.com/android/adt/$SDK_FILE
+    SDK_FILE=android-sdk_r22.3-macosx.zip
+    SDK_URL=http://dl.google.com/android/$SDK_FILE
 fi
 
 DEFAULT_INSTALL=platform-tools
@@ -66,7 +66,7 @@ if [[ $os == 'linux' ]]; then
     export ANDROID_HOME=$INSTALLER_DIR/android-sdk-linux
 elif [[ $os == 'osx' ]]; then
     unzip -q -d $INSTALLER_DIR $INSTALLER_DIR/$SDK_FILE
-    export ANDROID_HOME=$INSTALLER_DIR/adt-bundle-mac-x86_64-20131030/sdk
+    export ANDROID_HOME=$INSTALLER_DIR/android-sdk-macosx
 fi
 
 # Download wait_for_emulator script
